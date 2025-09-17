@@ -34,9 +34,9 @@
 
 
 \maketitle
-\begin{frame}{Outline}
-\tableofcontents
-\end{frame}
+%% \begin{frame}{Outline}
+%% \tableofcontents
+%% \end{frame}
 
 \newcommand{\pivec}{\mathbf \pi}
 \newcommand{\xvec}{\mathbf x}
@@ -48,6 +48,7 @@
 \bf
 \section{はじめに}
 \label{sec:org8d9d03d}
+%2
 \begin{frame}[label={sec:org3682d4b}]{研究の背景 : ネットワークレジリエンスの必要性}
 \begin{itemize}
 \item 現代社会と通信ネットワーク
@@ -65,6 +66,7 @@
 \item レジリエンス：障害や攻撃を受けても、機能を維持し続けられる能力
 \end{itemize}
 \end{frame}
+%3
 \begin{frame}[label={sec:org97a22d9}]{研究の動機 : 先行研究と課題}
 \begin{itemize}
 \item 既存のレジリエンス向上のアプローチ
@@ -82,6 +84,7 @@
 
 → 未知のネットワーク上では利用できない
 \end{frame}
+%4
 \begin{frame}[label={sec:orgb9b5a98}]{研究の目的}
 \begin{itemize}
 \item 本研究の想定
@@ -105,6 +108,7 @@
 \end{itemize}
 \end{itemize}
 \end{frame}
+%5
 \section{RW によるアンカーノード探索}
 \label{sec:org0282284}
 \begin{frame}[label={sec:orgd25499c}]{フォロワー最大化問題 (1/2)}
@@ -125,6 +129,7 @@
 
 どのようにアンカーノードを設定すれば、最大のフォロワーを得られるかを解く
 \end{frame}
+%6
 \begin{frame}[label={sec:orged383bc}]{フォロワー最大化問題 (2/2)}
 フォロワー最大化問題の定義
 \begin{itemize}
@@ -149,6 +154,8 @@
 \item 保護されるノードの数を最大化する
 \end{itemize}
 \end{itemize}
+
+% 7 
 \end{frame}
 \begin{frame}[label={sec:org27a6bc8}]{ランダムウォークによるアンカーノード探索の概要}
 \begin{itemize}
@@ -158,10 +165,6 @@
 \item ランダムウォークで探索した部分グラフを入力として、フォロワー最大化問題を解く
 \item その際のフォロワー最大化問題は既存の手法を用いて解く
 \end{itemize}
-\end{itemize}
-\end{frame}
-\begin{frame}[label={sec:orgf33e666}]{ランダムウォークによるアンカーノード探索}
-\begin{itemize}
 \item 具体的なアンカーノード選定方法
 \begin{enumerate}
 \item 探査エージェントがランダムウォークを開始する
@@ -172,6 +175,20 @@
 \end{enumerate}
 \end{itemize}
 \end{frame}
+% --
+%% \begin{frame}[label={sec:orgf33e666}]{ランダムウォークによるアンカーノード探索}
+%% \begin{itemize}
+%% \item 具体的なアンカーノード選定方法
+%% \begin{enumerate}
+%% \item 探査エージェントがランダムウォークを開始する
+%% \item 探索エージェントが訪問したノード、リンクを記録する
+%% \item ある探査ステップ \(k\) 経過後、記録したノードとリンクから構築されたグラフ \(G'(k)\) を取得する
+%% \item 既存手法で提案されたアンカーノード決定手法 AdvGreedy を \(G'(k)\) に適用する
+%% \item グラフ \(G'(k)\) におけるアンカーノードの集合 \(A_k\) を得る
+%% \end{enumerate}
+%% \end{itemize}
+%% \end{frame}
+% 8
 \section{実験}
 \label{sec:org7e13e3d}
 \begin{frame}[label={sec:org03810a4}]{実験の目的と設定}
@@ -197,6 +214,7 @@
 \end{itemize}
 \end{itemize}
 \end{frame}
+%9
 \begin{frame}[label={sec:org8e277fb}]{結果}
 \begin{center}
 \begin{figure}[h!]
@@ -217,6 +235,7 @@
 \item ランダムグラフにおいてもBAグラフにおいてもSARWが最も高いレジリエンスゲインを早期に達成できる
 \end{itemize}
 \end{frame}
+%10
 \section{まとめ}
 \label{sec:org4b3d7d5}
 \begin{frame}[label={sec:orgeadf93c}]{まとめと今後の課題}
